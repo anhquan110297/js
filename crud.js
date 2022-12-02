@@ -40,7 +40,6 @@ let students = [
 // Create
 let studentName = prompt("please input student's name");
 let studentAddress = prompt("please input student's address");
-
 if (students.length == 0){
     students.push({
         id : 1,
@@ -55,7 +54,6 @@ if (students.length == 0){
     })
 }
 console.log(students);
-
 
 // edit
 // gia su o day e chi cho edit name thoi

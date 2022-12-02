@@ -82,7 +82,19 @@ const avgMathScore = totalMathScore / students.length;
 console.log(avgMathScore);
 
 //Cộng cho mỗi sinh viên 1 điểm toán
-students.forEach( student => student.toan++);
+var newStutdents = students.map( student =>{
+    return {
+        ...student,
+        toan : student.toan < 10 ? student.toan + 1 : student.toan
+    }
+});
+console.log(newStudents);
+// 3. Lọc ra các sinh viên xếp loại giỏi
+var listGoodStudents = students.filter(function (student) {
+    return student.toan >= 8 && student.ly >= 8 && student.hoa >= 8;
+});
+console.log(listGoodStudents);
+
 // let temp = students.forEach( student => student.toan++);
 // console.log(temp); // log ra undefined
 console.log(students); // thuoc tinh diem toan van thay doi
