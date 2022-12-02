@@ -13,8 +13,12 @@
             <input type="text" id="username"><br>
             <label for="passowrd">passowrd</label>
             <input type="password" id="passowrd"><br>
-            <button onclick="clickMe()">submit</button>
         </form>
+        <button onclick="clickMe()">submit</button>
+    </div>
+    <div>
+        <h1 id="displayUsername"></h1>
+        <h1 id="displayPassword"></h1>
     </div>
 </body>
 <script>
@@ -27,8 +31,9 @@
     tempOject.username = document.getElementById("username").value;
     tempOject.password = document.getElementById("passowrd").value;
     console.log(tempOject.username);
-    alert(tempOjec.username);
-    alert(tempOjec.password);
+    document.getElementById("displayUsername").innerText = tempOject.username;
+    document.getElementById("displayPassword").innerText = tempOject.password;
+
 }
 </script>
 </html>
